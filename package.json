@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "npm run build",
     "build": "npm run clean && babel -d ./build ./server -s ",
-    "clean": "del build",
+    "clean": "rm -rf build",
     "dev": "nodemon --exec babel-node ./server/index.js",
     "start": "node ./build/index.js "
   },
