@@ -1,5 +1,6 @@
 const EXCEPTION = {
-    divisionByZero : "Diviser par zero"
+    divisionByZero : "Diviser par zero",
+    Error : "Error"
 }
 
 

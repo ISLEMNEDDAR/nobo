@@ -10,7 +10,7 @@ const program1= (req,res)=>{
         if(iserror) response(res, 422, {message: createErrorString(errors)})
         else {
             let result = programme1(req.query.string,req.query.number)
-            response(res,200,{message: result})
+            response(res,200,{result: result})
         }
     }catch(err){
         if(err === EXCEPTION.divisionByZero) response(res,500,{message : "number is zero"})
@@ -23,8 +23,8 @@ const program2 = (req,res)=>{
         let {iserror, errors}= handleValidationError(req,res)
         if(iserror) response(res, 422, {message: createErrorString(errors)})
         else {
-            let result = programme2(req.query.string,req.query.number)
-            response(res,200,{message: result})
+            let result = programme2(req.query.date_start,req.query.date_end)
+            response(res,200,{result: result})
         }
     }catch(err){
         console.log("fsfsdfsdf")

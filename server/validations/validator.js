@@ -11,8 +11,8 @@ export default {
         query("number","number est requis").exists().isInt({min : 0,max : 20}).withMessage("number doit etre numeric entre 0 et 20")
     ],
     pTwoTypes : [
-        body("dateStart").exists().custom(value=>validateDate(value)).withMessage("date is invlid"),
-        body("dateEnd").optional().custom(value=>validateDate(value)).withMessage("date is invlid"),
+        query("date_start","la date de depart est requise").exists().custom(value=>validateDate(value)).withMessage("date is invlid"),
+        query("date_end").optional().custom(value=>validateDate(value)).withMessage("date is invlid"),
     ]
 }
 
