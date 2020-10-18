@@ -22,6 +22,17 @@ describe("excercice",()=>{
         });
     })
     describe("program2",()=>{
-
+        it("should return 15", ()=>{
+            expect(respositoryProgram.programme2("2020-06-10","2020-07-25"),15)
+        });
+        it('should return 9 without date_end', function () {
+            expect(expect(respositoryProgram.programme2("2020-06-10"),9))
+        });
+        it('should error on date_start not exist', function () {
+            expect(()=> respositoryProgram.programme2().to.throw())
+        });
+        it('should error on date_end before date_start', function () {
+            expect(()=> respositoryProgram.programme2("2020-06-10","2019-07-25").to.throw())
+        });
     })
 })

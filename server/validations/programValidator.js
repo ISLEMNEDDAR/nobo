@@ -1,12 +1,4 @@
 import validationType from "./validator"
-import moment from "moment";
-
-/*const validateDate = (value)=>{
-    return moment(value, 'YYYY-MM-DD',true).isValid()
-}*/
-
-
-
 
 export const validateProgram = (methode) =>{
     switch (methode) {

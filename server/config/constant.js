@@ -1,6 +1,7 @@
 const EXCEPTION = {
     divisionByZero : "Diviser par zero",
-    Error : "Error"
+    Error : "Error",
+    dateComparaison : "dateEnd before dateStart"
 }
 
 

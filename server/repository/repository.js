@@ -10,7 +10,8 @@ const programme1 = (string, number)=>{
 }
 
 const programme2 = (date_start,date_end)=>{
-    //what if date_end < date_start
+    if (date_start === undefined) throw EXCEPTION.Error
+    if(moment(date_end).isBefore(date_start)) throw EXCEPTION.dateComparaison
     let dateIntervalle = calculeDebutDateStart(date_start)
     if (date_end !== undefined) dateIntervalle+=calculeDebutDateEnd(date_end)
     return dateIntervalle

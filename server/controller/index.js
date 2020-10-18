@@ -27,10 +27,8 @@ const program2 = (req,res)=>{
             response(res,200,{result: result})
         }
     }catch(err){
-        console.log("fsfsdfsdf")
-        console.log(err === EXCEPTION.divisionByZero)
-        if(err === EXCEPTION.divisionByZero) response(res,500,{message : "number is zero"})
-        //else response(res,500,{message : "error"})
+        if(err === EXCEPTION.dateComparaison) response(res,500,{message : "date end must be after date start"})
+        else response(res,500,{message : "error"})
     }
 }
 

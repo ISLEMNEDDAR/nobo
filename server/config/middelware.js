@@ -22,6 +22,5 @@ export default (app)=>{
     app.use((req,res,next)=>{
         setHeader(req,res,next)
     })
-    console.log("api")
     app.use('/api',apiRoutes)
 }
